@@ -1,22 +1,33 @@
 {
   "dependencies": {
+    "@shopify/restyle": "^1.1.0",
     "expo": "~38.0.0",
     "next": "9.3.5",
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
-    "react-native-web": "0.11.7"
+    "react-native-web": "0.11.7",
+    "use-immer": "^0.4.1",
+    "zustand": "^2.2.4"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
-    "@expo/next-adapter": "2.1.0"
+    "@expo/next-adapter": "2.1.9",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.46",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-native": "^0.63.8",
+    "babel-preset-expo": "^8.2.3",
+    "typescript": "^3.9.7"
   },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "build": "expo build:web",
+    "deploy": "npm run build && firebase deploy --only hosting"
   },
   "private": true
 }
