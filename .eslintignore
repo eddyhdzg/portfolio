@@ -1,0 +1,9 @@
+.expo
+.firebase
+.firebaserc
+firebase.json
+web-build
+node_modules
+dist
+.expo-shared
+next-env.d.ts

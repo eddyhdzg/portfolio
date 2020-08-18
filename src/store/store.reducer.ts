@@ -2,7 +2,7 @@ import { produce } from "immer";
 import { Actions } from "./store.actions";
 import { Store } from "./index";
 
-export const reducer = (state: Store, action: Actions) => {
+export const reducer = (state: Store, action: Actions): Store => {
   return produce(state, (draftState) => {
     switch (action.type) {
       case "COUNT_SET_COUNT":

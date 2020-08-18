@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, View, StyleSheet, Button } from "react-native";
 import { useTheme } from "@shopify/restyle";
-import { Theme } from "../theme/Theme";
-import Center from "../utils/components/Center";
-import { useStore } from "../store";
+import { Theme } from "theme";
+import Center from "utils/components/Center";
+import { useStore } from "store";
 import shallow from "zustand/shallow";
 
 const styles = (theme: Theme) =>
@@ -23,7 +23,7 @@ const Landing: React.FC = () => {
   const theme = useTheme<Theme>();
   const { count, dispatch } = useStore(
     (state) => ({ count: state.count, dispatch: state.dispatch }),
-    shallow
+    shallow,
   );
 
   return (

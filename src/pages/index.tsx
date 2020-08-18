@@ -1,11 +1,12 @@
 import React from "react";
-import ThemeProvider from "../theme/Theme";
-import { Landing } from "../templates";
+import { ThemeProvider } from "theme";
+import { Landing } from "templates";
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <ThemeProvider>
       <Landing />
     </ThemeProvider>
   );
-}
+};
+export default App;

@@ -1,6 +1,4 @@
-import { createTheme, ThemeProvider as Provider } from "@shopify/restyle";
-import { useStore } from "../store";
-import shallow from "zustand/shallow";
+import { createTheme } from "@shopify/restyle";
 
 const colors = {
   black: "#000",
@@ -99,15 +97,4 @@ export const lightTheme = {
   },
 };
 
-export type Theme = typeof darkTheme;
-
-const ThemeProvider: React.FC = ({ children }) => {
-  const { theme } = useStore((state) => ({ theme: state.theme }), shallow);
-
-  return (
-    <Provider theme={theme === "dark" ? darkTheme : lightTheme}>
-      {children}
-    </Provider>
-  );
-};
-export default ThemeProvider;
+export type DarkTheme = typeof darkTheme;
