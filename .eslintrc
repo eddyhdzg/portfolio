@@ -11,7 +11,7 @@
     "plugin:jest/recommended"
   ],
   "rules": {
-    "no-console": 1,
+    "no-console": "off",
     "prettier/prettier": 2,
     "react/prop-types": [2, { "ignore": ["children"] }]
     // "jest/no-disabled-tests": "warn",

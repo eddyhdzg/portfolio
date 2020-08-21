@@ -17,6 +17,12 @@ export const reducer = (state: Store, action: Actions): Store => {
       case "THEME_TOGGLE_THEME":
         draftState.theme = state.theme === "dark" ? "light" : "dark";
         break;
+      case "THEME_SET_LIGHT_THEME":
+        draftState.theme = "light";
+        break;
+      case "THEME_SET_DARK_THEME":
+        draftState.theme = "dark";
+        break;
       default:
         throw new Error("Invalid action type");
     }

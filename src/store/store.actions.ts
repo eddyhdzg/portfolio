@@ -15,8 +15,17 @@ export interface ThemeToggleTheme {
   type: "THEME_TOGGLE_THEME";
 }
 
+export interface ThemeSetLightTheme {
+  type: "THEME_SET_LIGHT_THEME";
+}
+export interface ThemeSetDarkTheme {
+  type: "THEME_SET_DARK_THEME";
+}
+
 export type Actions =
   | CountSetCount
   | CountIncreaseCount
   | CountDecreaseCount
-  | ThemeToggleTheme;
+  | ThemeToggleTheme
+  | ThemeSetLightTheme
+  | ThemeSetDarkTheme;

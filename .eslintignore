@@ -7,3 +7,4 @@ node_modules
 dist
 .expo-shared
 next-env.d.ts
+next.config.js

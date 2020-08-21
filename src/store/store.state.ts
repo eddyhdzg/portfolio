@@ -3,4 +3,4 @@ export interface State {
   theme: "dark" | "light";
 }
 
-export const initialState: State = { count: 10, theme: "dark" };
+export const initialState: State = { count: 10, theme: "light" };

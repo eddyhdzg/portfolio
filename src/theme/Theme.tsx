@@ -81,7 +81,7 @@ export const darkTheme = createTheme({
   transitions: {},
   typography: {
     fontFamily:
-      '"Inter", "Roboto", "-apple-system", "Helvetica", "Arial", sans-serif',
+      '"Inter_400Regular", "Roboto", "-apple-system", "Helvetica", "Arial", sans-serif',
   },
   zIndex: {},
 });
