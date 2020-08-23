@@ -14,7 +14,9 @@
     "no-console": "off",
     "prettier/prettier": 2,
     "react/prop-types": [2, { "ignore": ["children"] }],
-    "@typescript-eslint/ban-ts-ignore": "off"
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+
     // "jest/no-disabled-tests": "warn",
     // "jest/no-focused-tests": "error",
     // "jest/no-identical-title": "error",
