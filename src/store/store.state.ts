@@ -1,6 +1,9 @@
 export interface State {
-  count: number;
-  theme: "dark" | "light";
+  themeType: "dark" | "light";
+  loadingTheme: boolean;
 }
 
-export const initialState: State = { count: 10, theme: "light" };
+export const initialState: State = {
+  themeType: "dark",
+  loadingTheme: true,
+};

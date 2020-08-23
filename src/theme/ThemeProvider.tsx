@@ -6,53 +6,39 @@ import { ThemeProvider as Provider } from "@shopify/restyle";
 import { AsyncStorage } from "react-native";
 
 const ThemeProvider: React.FC = ({ children }) => {
-  const { theme, dispatch } = useStore(
-    (state) => ({ theme: state.theme, dispatch: state.dispatch }),
+  const { themeType, dispatch } = useStore(
+    ({ themeType, dispatch }) => ({ themeType, dispatch }),
     shallow,
   );
 
-  const save = async () => {
-    try {
-      if (theme) {
-        await AsyncStorage.setItem("theme", theme);
-      }
-    } catch (e) {
-      console.log(e);
-      console.error("Failed to save theme.");
-    }
-  };
-
   const load = async () => {
     try {
-      const theme = await AsyncStorage.getItem("theme");
-
-      if (theme !== null) {
-        if (theme === "dark") {
+      await AsyncStorage.getItem("themeType").then((themeType) => {
+        if (themeType !== null) {
           dispatch({
             type:
-              theme === "dark"
-                ? "THEME_SET_DARK_THEME"
-                : "THEME_SET_LIGHT_THEME",
+              themeType === "light"
+                ? "THEME_SET_LIGHT_THEME"
+                : "THEME_SET_DARK_THEME",
           });
         }
-      }
+      });
     } catch (e) {
       console.log(e);
-
       console.error("Failed to load theme.");
     }
   };
 
   useEffect(() => {
-    load();
+    load().then(() => dispatch({ type: "LOADINGTHEME_SET_FALSE" }));
   }, []);
 
   useEffect(() => {
-    save();
-  }, [theme]);
+    AsyncStorage.setItem("themeType", themeType);
+  }, [themeType]);
 
   return (
-    <Provider theme={theme === "dark" ? darkTheme : lightTheme}>
+    <Provider theme={themeType === "light" ? lightTheme : darkTheme}>
       {children}
     </Provider>
   );

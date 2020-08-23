@@ -3,13 +3,24 @@ import { createTheme } from "@shopify/restyle";
 const colors = {
   black: "#000",
   white: "#fff",
-  gerys: {
+  greys: {
     chip: "rgba(135,131,120,0.15)",
     paper: "rgb(63, 68, 71)",
-    default: "rgb(47, 52, 55)",
+    default: "#252A35",
+    grey1: "#303947",
+    grey2: "#3F495A",
     divider: "rgba(255, 255, 255, 0.07)",
-    greyPrimary: "rgba(0, 0, 0, 0.90)",
-    grepySecondary: "rgba(0, 0, 0, 0.60)",
+    primary: "rgba(255, 255, 255, 0.90)",
+    secondary: "rgba(255, 255, 255, 0.60)",
+    border: "#E0E3E9",
+  },
+  yellow: {
+    primary: "#E9A242",
+    secondary: "#FFE9C8",
+  },
+  blacks: {
+    primary: "#37352f",
+    secondary: "#9b9a97",
   },
   blues: {
     primary: "rgb(82,156,202)",
@@ -43,22 +54,30 @@ export const darkTheme = createTheme({
   colors: {},
   palette: {
     background: {
-      chip: colors.gerys.chip,
-      paper: colors.gerys.paper,
-      default: colors.gerys.default,
+      chip: colors.greys.chip,
+      paper: colors.greys.paper,
+      default: colors.greys.default,
+      grey1: colors.greys.grey1,
+      grey2: colors.greys.grey2,
     },
     common: {
       black: colors.black,
       white: colors.white,
     },
-    divider: colors.gerys.divider,
+    divider: colors.greys.divider,
     greys: colors.muigreys,
     primary: {
       main: colors.blues.primary,
     },
     text: {
-      primary: colors.gerys.greyPrimary,
-      secondary: colors.gerys.grepySecondary,
+      primary: colors.greys.primary,
+      secondary: colors.greys.secondary,
+    },
+    switch: {
+      primary: colors.white,
+      secondary: colors.greys.grey1,
+      tertiary: colors.greys.grey2,
+      border: colors.greys.grey2,
     },
   },
   spacing: {
@@ -86,13 +105,25 @@ export const darkTheme = createTheme({
   zIndex: {},
 });
 
-export const lightTheme = {
+export const lightTheme: typeof darkTheme = {
   ...darkTheme,
   palette: {
     ...darkTheme.palette,
     background: {
       ...darkTheme.palette.background,
       default: colors.white,
+    },
+    text: {
+      primary: colors.blacks.primary,
+      secondary: colors.blacks.secondary,
+    },
+    switch: {
+      ...darkTheme.palette.switch,
+      primary: colors.yellow.primary,
+      secondary: colors.white,
+      tertiary: colors.yellow.secondary,
+      border: colors.greys.border,
+      // background: colors.white,
     },
   },
 };
