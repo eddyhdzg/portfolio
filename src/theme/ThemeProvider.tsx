@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useStore } from "store";
 import shallow from "zustand/shallow";
 import { darkTheme, lightTheme } from "./theme";
-import { ThemeProvider as Provider } from "@shopify/restyle";
+import { ThemeProvider as RestyleProvider } from "@shopify/restyle";
 import { AsyncStorage } from "react-native";
 
 const ThemeProvider: React.FC = ({ children }) => {
@@ -38,9 +38,9 @@ const ThemeProvider: React.FC = ({ children }) => {
   }, [themeType]);
 
   return (
-    <Provider theme={themeType === "light" ? lightTheme : darkTheme}>
+    <RestyleProvider theme={themeType === "light" ? lightTheme : darkTheme}>
       {children}
-    </Provider>
+    </RestyleProvider>
   );
 };
 export default ThemeProvider;

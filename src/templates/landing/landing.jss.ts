@@ -6,8 +6,11 @@ const landingStyles = (theme: Theme) =>
     themeView: {
       flex: 1,
       backgroundColor: theme.palette.background.default,
+      alignItems: "stretch",
     },
     container: {
+      marginHorizontal: "auto",
+      width: "90%",
       maxWidth: 1440,
     },
   });

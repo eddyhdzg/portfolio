@@ -1,9 +1,11 @@
 import { StyleSheet } from "react-native";
+import { theme } from "theme";
 
 const navbarStyles = StyleSheet.create({
   navbar: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
+    alignItems: "flex-end",
+    marginVertical: theme.spacing.sm,
+    userSelect: "none",
   },
 });
 

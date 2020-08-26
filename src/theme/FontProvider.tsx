@@ -7,7 +7,7 @@ import {
   Inter_700Bold,
 } from "@expo-google-fonts/inter";
 
-const FontProvider: React.FC = () => {
+const FontProvider: React.FC = ({ children }) => {
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
     Inter_600SemiBold,
@@ -18,7 +18,7 @@ const FontProvider: React.FC = () => {
     return <Text>Loading fonts...</Text>;
   }
 
-  return <Text style={{ fontFamily: "Inter_700Bold" }}>Inter Black</Text>;
+  return <>{children}</>;
 };
 
 export default FontProvider;

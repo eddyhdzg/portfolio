@@ -1,11 +1,13 @@
 import React from "react";
-import { ThemeProvider } from "theme";
+import { ThemeProvider, FontProvider } from "theme";
 import { Landing } from "templates";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <Landing />
+      <FontProvider>
+        <Landing />
+      </FontProvider>
     </ThemeProvider>
   );
 };

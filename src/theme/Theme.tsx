@@ -1,6 +1,6 @@
 import { createTheme } from "@shopify/restyle";
 
-const colors = {
+export const colors = {
   black: "#000",
   white: "#fff",
   greys: {
@@ -51,7 +51,9 @@ export const darkTheme = createTheme({
     lg: 1280,
     xl: 1920,
   },
-  colors: {},
+  colors: {
+    primaryText: colors.white,
+  },
   palette: {
     background: {
       chip: colors.greys.chip,
@@ -102,6 +104,29 @@ export const darkTheme = createTheme({
     fontFamily:
       '"Inter_400Regular", "Roboto", "-apple-system", "Helvetica", "Arial", sans-serif',
   },
+  textVariants: {
+    h1: {
+      fontFamily: "Inter_700Bold",
+      fontWeight: "bold",
+      fontSize: 40,
+      lineHeight: 48,
+      color: "primaryText",
+    },
+    bold: {
+      fontFamily: "Inter_600SemiBold",
+      fontWeight: "semibold",
+      fontSize: 16,
+      lineHeight: 24,
+      color: "primaryText",
+    },
+    regular: {
+      fontFamily: "Inter_400Regular",
+      fontWeight: "normal",
+      fontSize: 16,
+      lineHeight: 24,
+      color: "primaryText",
+    },
+  },
   zIndex: {},
 });
 
@@ -123,8 +148,14 @@ export const lightTheme: typeof darkTheme = {
       secondary: colors.white,
       tertiary: colors.yellow.secondary,
       border: colors.greys.border,
-      // background: colors.white,
     },
+  },
+  typography: {
+    ...darkTheme.typography,
+  },
+  colors: {
+    ...darkTheme.colors,
+    primaryText: colors.black,
   },
 };
 
