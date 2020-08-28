@@ -1,13 +1,23 @@
 import React from "react";
-import { View, StyleProp, TextStyle } from "react-native";
-import borderStyles from "./borderView.jss";
+import { Card, RestyleText } from "atoms";
 
-interface IBorderView {
-  style: StyleProp<TextStyle>;
+interface IBorderViewProps {
+  cardVariant: "bordered" | "borderless";
+  justifyContent?: "center";
+  textVariant: "regular" | "bold";
 }
 
-const BorderView: React.FC<IBorderView> = ({ style, children }) => {
-  return <View style={[borderStyles.border, style]}>{children}</View>;
+const BorderView: React.FC<IBorderViewProps> = ({
+  children,
+  cardVariant,
+  justifyContent,
+  textVariant,
+}) => {
+  return (
+    <Card variant={cardVariant} justifyContent={justifyContent} flex={1}>
+      <RestyleText variant={textVariant}>{children}</RestyleText>
+    </Card>
+  );
 };
 
 export default BorderView;

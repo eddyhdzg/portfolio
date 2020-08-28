@@ -38,7 +38,7 @@ const switchStyles = ({ theme, isDark, ballSpring }: SwitchStyles) =>
       width: SIZE * 2 + PADDING * 4,
       padding: PADDING,
       ...(!isDark && {
-        shadowColor: theme.palette.common.black,
+        shadowColor: theme.colors.black,
         shadowOffset: {
           width: 0,
           height: 4,

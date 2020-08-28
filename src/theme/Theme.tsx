@@ -1,133 +1,102 @@
 import { createTheme } from "@shopify/restyle";
-
-export const colors = {
-  black: "#000",
-  white: "#fff",
-  greys: {
-    chip: "rgba(135,131,120,0.15)",
-    paper: "rgb(63, 68, 71)",
-    default: "#252A35",
-    grey1: "#303947",
-    grey2: "#3F495A",
-    divider: "rgba(255, 255, 255, 0.07)",
-    primary: "rgba(255, 255, 255, 0.90)",
-    secondary: "rgba(255, 255, 255, 0.60)",
-    border: "#E0E3E9",
-  },
-  yellow: {
-    primary: "#E9A242",
-    secondary: "#FFE9C8",
-  },
-  blacks: {
-    primary: "#37352f",
-    secondary: "#9b9a97",
-  },
-  blues: {
-    primary: "rgb(82,156,202)",
-  },
-  muigreys: {
-    50: "#fafafa",
-    100: "#f5f5f5",
-    200: "#eeeeee",
-    300: "#e0e0e0",
-    400: "#bdbdbd",
-    500: "#9e9e9e",
-    600: "#757575",
-    700: "#616161",
-    800: "#424242",
-    900: "#212121",
-    A100: "#d5d5d5",
-    A200: "#aaaaaa",
-    A400: "#303030",
-    A700: "#616161",
-  },
-};
+import tokens from "./tokens";
 
 export const darkTheme = createTheme({
   breakpoints: {
     xs: 0,
-    sm: 600,
-    md: 960,
-    lg: 1280,
+    sm: 768,
+    md: 1024,
+    lg: 1440,
     xl: 1920,
   },
   colors: {
-    primaryText: colors.white,
+    black: tokens.colors.common.black,
+    white: tokens.colors.common.white,
+    transparent: tokens.colors.common.transparent,
+    primaryText: tokens.colors.common.white,
+    divider: tokens.colors.whites[100],
+    violet100: tokens.colors.violet[100],
+    violet200: tokens.colors.violet[200],
   },
   palette: {
     background: {
-      chip: colors.greys.chip,
-      paper: colors.greys.paper,
-      default: colors.greys.default,
-      grey1: colors.greys.grey1,
-      grey2: colors.greys.grey2,
-    },
-    common: {
-      black: colors.black,
-      white: colors.white,
-    },
-    divider: colors.greys.divider,
-    greys: colors.muigreys,
-    primary: {
-      main: colors.blues.primary,
-    },
-    text: {
-      primary: colors.greys.primary,
-      secondary: colors.greys.secondary,
+      default: tokens.colors.blacks[500],
     },
     switch: {
-      primary: colors.white,
-      secondary: colors.greys.grey1,
-      tertiary: colors.greys.grey2,
-      border: colors.greys.grey2,
+      primary: tokens.colors.common.white,
+      secondary: tokens.colors.blacks[400],
+      tertiary: tokens.colors.blacks[300],
+      border: tokens.colors.blacks[300],
     },
   },
   spacing: {
-    xs: 4,
-    sm: 8,
-    md: 12,
-    base: 16,
-    xl: 20,
-    "2xl": 24,
-    "3xl": 32,
-    "4xl": 40,
-    "5xl": 52,
-    "6xl": 64,
+    0: tokens.units[0],
+    xs: tokens.units["xs"],
+    sm: tokens.units["sm"],
+    md: tokens.units["md"],
+    base: tokens.units["base"],
+    xl: tokens.units["xl"],
+    "2xl": tokens.units["2xl"],
+    "3xl": tokens.units["3xl"],
+    "4xl": tokens.units["4xl"],
+    "5xl": tokens.units["5xl"],
+    "6xl": tokens.units["6xl"],
+    "7xl": tokens.units["7xl"],
   },
-
-  shadows: {},
   shape: {
     borderRadius: 4,
   },
-  transitions: {},
   typography: {
     fontFamily:
       '"Inter_400Regular", "Roboto", "-apple-system", "Helvetica", "Arial", sans-serif',
   },
+  cardVariants: {
+    bordered: {
+      borderWidth: 1,
+      borderColor: "divider",
+      borderRadius: 3,
+      paddingHorizontal: "base",
+      paddingVertical: "md",
+    },
+    borderless: {
+      borderWidth: 1,
+      borderColor: "transparent",
+      borderRadius: 3,
+      paddingVertical: "md",
+    },
+  },
+
   textVariants: {
-    h1: {
+    header: {
+      color: "primaryText",
       fontFamily: "Inter_700Bold",
       fontWeight: "bold",
-      fontSize: 40,
-      lineHeight: 48,
-      color: "primaryText",
+      fontSize: {
+        xs: tokens.units["2xl"],
+        sm: tokens.units["3xl"],
+        md: tokens.units["4xl"],
+      },
+      lineHeight: {
+        xs: tokens.units["3xl"],
+        sm: tokens.units["4xl"],
+        md: tokens.units["5xl"],
+      },
     },
     bold: {
+      color: "primaryText",
       fontFamily: "Inter_600SemiBold",
       fontWeight: "semibold",
-      fontSize: 16,
-      lineHeight: 24,
-      color: "primaryText",
+      fontSize: 19,
+      lineHeight: 28,
     },
     regular: {
+      color: "primaryText",
       fontFamily: "Inter_400Regular",
       fontWeight: "normal",
       fontSize: 16,
       lineHeight: 24,
-      color: "primaryText",
     },
   },
-  zIndex: {},
 });
 
 export const lightTheme: typeof darkTheme = {
@@ -136,26 +105,20 @@ export const lightTheme: typeof darkTheme = {
     ...darkTheme.palette,
     background: {
       ...darkTheme.palette.background,
-      default: colors.white,
-    },
-    text: {
-      primary: colors.blacks.primary,
-      secondary: colors.blacks.secondary,
+      default: tokens.colors.common.white,
     },
     switch: {
       ...darkTheme.palette.switch,
-      primary: colors.yellow.primary,
-      secondary: colors.white,
-      tertiary: colors.yellow.secondary,
-      border: colors.greys.border,
+      primary: tokens.colors.yellow[100],
+      secondary: tokens.colors.common.white,
+      tertiary: tokens.colors.yellow[200],
+      border: tokens.colors.blacks[100],
     },
-  },
-  typography: {
-    ...darkTheme.typography,
   },
   colors: {
     ...darkTheme.colors,
-    primaryText: colors.black,
+    primaryText: tokens.colors.greys[200],
+    divider: tokens.colors.blacks[100],
   },
 };
 

@@ -1,23 +1,18 @@
 import { StyleSheet } from "react-native";
+import { theme } from "../../theme";
 
 const heroStyles = StyleSheet.create({
   nameContainer: {
-    marginTop: 48,
-    marginBottom: 36,
+    marginTop: theme.spacing["5xl"],
+    marginBottom: theme.spacing["4xl"],
   },
-  bottomContainer: {
-    flexDirection: "row",
-  },
+
   titleContainer: {
-    flex: 1,
     justifyContent: "center",
   },
   descriptionContainer: {
-    flex: 2,
-    // justifyContent: "center",
     alignItems: "center",
-    padding: 8, //FIXME
-    paddingLeft: 48,
+    paddingVertical: theme.spacing["md"],
   },
 });
 
