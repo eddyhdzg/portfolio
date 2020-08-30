@@ -50,7 +50,7 @@ const switchStyles = ({ theme, isDark, ballSpring }: SwitchStyles) =>
     icons: {
       position: "absolute",
       top: 0,
-      left: PADDING,
+      left: PADDING * 1.5 - BORDER_WIDTH,
       right: 0,
       bottom: 0,
       justifyContent: "space-between",
