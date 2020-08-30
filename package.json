@@ -1,20 +1,17 @@
 {
   "dependencies": {
     "@expo-google-fonts/inter": "^0.1.0",
-    "@expo/vector-icons": "^10.2.0",
     "@shopify/restyle": "^1.1.0",
     "dripsy": "^0.5.2",
     "expo": "~38.0.0",
     "expo-font": "~8.2.1",
     "expo-linear-gradient": "^8.2.1",
-    "expo-web-browser": "^8.3.1",
     "immer": "^7.0.7",
     "next": "9.3.5",
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
     "react-native-svg": "12.1.0",
-    "react-native-svg-transformer": "^0.14.3",
     "react-native-web": "0.11.7",
     "react-spring": "^8.0.27",
     "zustand": "^2.2.4"

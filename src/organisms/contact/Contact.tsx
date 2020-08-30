@@ -5,8 +5,7 @@ import { BorderView } from "molecules";
 import { useTheme } from "@shopify/restyle";
 import { Theme } from "theme";
 import Svg, { Path } from "react-native-svg";
-import ExternalLink from "./ExternalLink";
-import { Linking } from "react-native";
+import { Linking, TouchableOpacity } from "react-native";
 
 const Contact: React.FC = () => {
   const { contact } = copies.landing;
@@ -39,10 +38,11 @@ const Contact: React.FC = () => {
               lg: "32%",
             }}
           >
-            <ExternalLink
+            <TouchableOpacity
               onPress={() => {
                 Linking.openURL(data.url);
               }}
+              style={{ flexDirection: "row" }}
             >
               <Svg
                 height="24px"
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
               >
                 {data.text}
               </RestyleText>
-            </ExternalLink>
+            </TouchableOpacity>
           </BorderView>
         ))}
       </Box>

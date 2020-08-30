@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { View, TouchableWithoutFeedback } from "react-native";
 import { animated, useSpring } from "react-spring/native";
-import { Feather } from "@expo/vector-icons";
 import { useStore } from "store";
 import shallow from "zustand/shallow";
 import { useTheme } from "@shopify/restyle";
 import { Theme } from "theme";
 import switchStyles, { SIZE, PADDING } from "./switch.jss";
+import { SunSVG, MoonSVG } from "assets/icons";
 
 const AnimatedView = animated(View);
 
@@ -18,6 +18,8 @@ const Switch: React.FC = () => {
     }),
     shallow,
   );
+
+  const ICON_SIZE = SIZE - PADDING;
 
   const theme = useTheme<Theme>();
   const isDark = themeType === "dark";
@@ -45,15 +47,15 @@ const Switch: React.FC = () => {
     >
       <View style={styles.container}>
         <View style={styles.icons}>
-          <Feather
-            name="sun"
-            size={SIZE - PADDING}
-            color={theme.palette.switch.primary}
+          <SunSVG
+            height={ICON_SIZE}
+            width={ICON_SIZE}
+            stroke={theme.palette.switch.primary}
           />
-          <Feather
-            name="moon"
-            size={SIZE - PADDING}
-            color={theme.palette.switch.primary}
+          <MoonSVG
+            height={ICON_SIZE}
+            width={ICON_SIZE}
+            stroke={theme.palette.switch.primary}
           />
         </View>
         <AnimatedView style={styles.ballStyles} />
