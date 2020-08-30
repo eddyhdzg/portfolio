@@ -95,6 +95,13 @@ export const darkTheme = createTheme({
       fontSize: 19,
       lineHeight: 28,
     },
+    sectionTitle: {
+      color: "primaryText",
+      fontFamily: "Inter_600SemiBold",
+      fontWeight: "semibold",
+      fontSize: 24,
+      lineHeight: 32,
+    },
     bold: {
       color: "primaryText",
       fontFamily: "Inter_700Bold",

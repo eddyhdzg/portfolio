@@ -1,9 +1,14 @@
 import React from "react";
-import { Box } from "atoms";
+import { Image } from "react-native";
 import avatarStyles from "./avatar.jss";
 
 const Avatar: React.FC = () => {
-  return <Box style={avatarStyles.avatar}></Box>;
+  return (
+    <Image
+      source={require("../../assets/avatar.jpg")}
+      style={avatarStyles.avatar}
+    />
+  );
 };
 
 export default Avatar;

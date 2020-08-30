@@ -1,5 +1,7 @@
 import React from "react";
-import { Card, RestyleText } from "atoms";
+import { Card, RestyleText, Box } from "atoms";
+import { VariantProps } from "@shopify/restyle";
+import { Theme } from "theme";
 
 interface IBorderViewProps {
   cardVariant: "bordered" | "borderless";
@@ -7,14 +9,13 @@ interface IBorderViewProps {
   textVariant: "regular" | "subHeader";
 }
 
-const BorderView: React.FC<IBorderViewProps> = ({
-  children,
-  cardVariant,
-  justifyContent,
-  textVariant,
-}) => {
+const BorderView: React.FC<
+  IBorderViewProps &
+    VariantProps<Theme, "cardVariants"> &
+    React.ComponentProps<typeof Box>
+> = ({ children, cardVariant, justifyContent, textVariant, ...rest }) => {
   return (
-    <Card variant={cardVariant} justifyContent={justifyContent} flex={1}>
+    <Card variant={cardVariant} justifyContent={justifyContent} {...rest}>
       <RestyleText variant={textVariant}>{children}</RestyleText>
     </Card>
   );

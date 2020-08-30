@@ -5,12 +5,15 @@ import { Box } from "atoms";
 
 const Abilities: React.FC = () => {
   const { experience, skills, languages, education } = copies.landing.abilities;
+
   return (
     <Box
-      marginBottom="7xl"
+      paddingBottom="2xl"
       flexDirection={{
         md: "row",
       }}
+      borderColor="divider"
+      borderBottomWidth={1}
     >
       <Box
         flex={{

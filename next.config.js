@@ -1,9 +1,12 @@
 const { withExpo } = require("@expo/next-adapter");
+const withImages = require("next-images");
 const withFonts = require("next-fonts");
 
 module.exports = withExpo(
-  withFonts({
-    projectRoot: __dirname,
-    distDir: "build",
-  }),
+  withImages(
+    withFonts({
+      projectRoot: __dirname,
+      distDir: "build",
+    }),
+  ),
 );

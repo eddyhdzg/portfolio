@@ -32,6 +32,7 @@ const Hero: React.FC = () => {
             cardVariant="bordered"
             textVariant="regular"
             justifyContent="center"
+            height="100%"
           >
             {title}
           </BorderView>

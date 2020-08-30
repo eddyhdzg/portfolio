@@ -1,11 +1,12 @@
 import React from "react";
-import { Text } from "react-native";
+
 import {
   useFonts,
   Inter_400Regular,
   Inter_600SemiBold,
   Inter_700Bold,
 } from "@expo-google-fonts/inter";
+import { Box, Spinner } from "../atoms";
 
 const FontProvider: React.FC = ({ children }) => {
   const [fontsLoaded] = useFonts({
@@ -15,7 +16,11 @@ const FontProvider: React.FC = ({ children }) => {
   });
 
   if (!fontsLoaded) {
-    return <Text>Loading fonts...</Text>;
+    return (
+      <Box flex={1} justifyContent="center">
+        <Spinner />
+      </Box>
+    );
   }
 
   return <>{children}</>;
