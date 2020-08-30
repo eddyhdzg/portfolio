@@ -1,10 +1,10 @@
 import { StyleSheet } from "react-native";
-import { theme } from "../../theme";
+import { theme } from "theme";
 
 const heroStyles = StyleSheet.create({
   nameContainer: {
     marginTop: theme.spacing["5xl"],
-    marginBottom: theme.spacing["4xl"],
+    marginBottom: theme.spacing["7xl"],
   },
 
   titleContainer: {

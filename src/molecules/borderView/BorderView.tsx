@@ -4,7 +4,7 @@ import { Card, RestyleText } from "atoms";
 interface IBorderViewProps {
   cardVariant: "bordered" | "borderless";
   justifyContent?: "center";
-  textVariant: "regular" | "bold";
+  textVariant: "regular" | "subHeader";
 }
 
 const BorderView: React.FC<IBorderViewProps> = ({

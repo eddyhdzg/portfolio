@@ -1,16 +1,13 @@
 import React from "react";
 import { View } from "react-native";
-import { useTheme } from "@shopify/restyle";
-import { Theme } from "theme";
 import { Cover } from "atoms";
-import { Navbar } from "organisms";
+import { Navbar, Hero, Abilities } from "organisms";
 import landingStyles from "./landing.jss";
-import Hero from "organisms/hero/Hero";
+import { useTheme } from "@shopify/restyle";
 
 const Landing: React.FC = () => {
-  const theme = useTheme<Theme>();
+  const theme = useTheme();
   const styles = landingStyles(theme);
-
   return (
     <View style={styles.themeView}>
       <View style={styles.container}>
@@ -19,6 +16,11 @@ const Landing: React.FC = () => {
       <Cover />
       <View style={styles.container}>
         <Hero />
+      </View>
+      <View style={styles.container}>
+        <View style={styles.topSpacing}>
+          <Abilities />
+        </View>
       </View>
     </View>
   );

@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
             md: 1,
           }}
           marginBottom={{
-            xs: "2xl",
+            xs: "xl",
             md: 0,
           }}
         >
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
         >
           <BorderView
             cardVariant="borderless"
-            textVariant="bold"
+            textVariant="subHeader"
             justifyContent="center"
           >
             {description}

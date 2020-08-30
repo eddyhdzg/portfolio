@@ -13,10 +13,12 @@ export const darkTheme = createTheme({
     black: tokens.colors.common.black,
     white: tokens.colors.common.white,
     transparent: tokens.colors.common.transparent,
-    primaryText: tokens.colors.common.white,
+    primaryText: tokens.colors.whites[300],
+    secondaryText: tokens.colors.whites[200],
     divider: tokens.colors.whites[100],
     violet100: tokens.colors.violet[100],
     violet200: tokens.colors.violet[200],
+    blue100: tokens.colors.blues[100],
   },
   palette: {
     background: {
@@ -64,6 +66,12 @@ export const darkTheme = createTheme({
       borderRadius: 3,
       paddingVertical: "md",
     },
+    subtitle: {
+      borderBottomWidth: 1,
+      borderColor: "divider",
+      paddingBottom: "sm",
+      marginBottom: "3xl",
+    },
   },
 
   textVariants: {
@@ -72,22 +80,27 @@ export const darkTheme = createTheme({
       fontFamily: "Inter_700Bold",
       fontWeight: "bold",
       fontSize: {
-        xs: tokens.units["2xl"],
-        sm: tokens.units["3xl"],
-        md: tokens.units["4xl"],
-      },
-      lineHeight: {
         xs: tokens.units["3xl"],
         sm: tokens.units["4xl"],
-        md: tokens.units["5xl"],
+      },
+      lineHeight: {
+        xs: tokens.units["4xl"],
+        sm: tokens.units["5xl"],
       },
     },
-    bold: {
+    subHeader: {
       color: "primaryText",
       fontFamily: "Inter_600SemiBold",
       fontWeight: "semibold",
       fontSize: 19,
       lineHeight: 28,
+    },
+    bold: {
+      color: "primaryText",
+      fontFamily: "Inter_700Bold",
+      fontWeight: "bold",
+      fontSize: 16,
+      lineHeight: 24,
     },
     regular: {
       color: "primaryText",
@@ -95,6 +108,25 @@ export const darkTheme = createTheme({
       fontWeight: "normal",
       fontSize: 16,
       lineHeight: 24,
+    },
+    secondary: {
+      color: "secondaryText",
+      fontFamily: "Inter_400Regular",
+      fontWeight: "normal",
+      fontSize: 16,
+      lineHeight: 24,
+    },
+    tag: {
+      color: "blue100",
+      fontFamily: "Inter_600SemiBold",
+      fontWeight: "bold",
+      fontSize: 17,
+      paddingVertical: "xs",
+      paddingHorizontal: "sm",
+      backgroundColor: "divider",
+      borderRadius: 3,
+      marginLeft: "sm",
+      textTransform: "uppercase",
     },
   },
 });

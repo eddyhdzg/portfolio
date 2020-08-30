@@ -13,6 +13,9 @@ const landingStyles = (theme: Theme) =>
       width: "90%",
       maxWidth: 1440,
     },
+    topSpacing: {
+      marginTop: theme.spacing["7xl"],
+    },
   });
 
 export default landingStyles;
