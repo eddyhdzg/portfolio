@@ -19,5 +19,5 @@
     "baseUrl": "./src"
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/_document.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/_document.js"]
 }

@@ -4,7 +4,7 @@ import { Card, RestyleText, Box } from "atoms";
 interface IExperienceProps {
   company: string;
   date: string;
-  description: string;
+  description: string[];
   location: string;
   position: string;
   isLast: boolean;
@@ -33,7 +33,11 @@ const Experience: React.FC<IExperienceProps> = ({
       <RestyleText variant="secondary" marginBottom="sm">
         {date}
       </RestyleText>
-      <RestyleText variant="regular">{description}</RestyleText>
+      {description.map((des) => (
+        <RestyleText key={des} variant="regular" marginBottom="xs">
+          {`\u2022 ${des}`}
+        </RestyleText>
+      ))}
     </Card>
   );
 };

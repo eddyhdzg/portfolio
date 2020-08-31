@@ -1,12 +1,17 @@
 export default {
-  // themeColor: "#CD00D8",
-  backgroundColor: "#000000",
+  name: "👨🏻‍💻 Eddy Hernandez",
+  slug: "eddyhdzg",
+  owner: "eddyhdzg",
+  description: "Personal porfolio website for eddyhdzg",
+  platforms: ["web"],
+  githubUrl: "https://github.com/eddyhdzg/portfolio",
+  themeColor: "#242933",
+  backgroundColor: "#242933",
   web: {
-    backgroundColor: "#2F3437",
     shortName: "eddyhdzg",
     startUrl: "https://eddyhdzg.com",
-    description: "Personal porfolio website for eddyhdzg",
     display: "standalone",
-    // themeColor: "#2F3437",
+    themeColor: "#242933",
+    backgroundColor: "#242933",
   },
 };

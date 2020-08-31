@@ -57,6 +57,7 @@ const Contact: React.FC = () => {
                 variant="regular"
                 marginLeft="base"
                 accessibilityRole="link"
+                textDecorationLine="underline"
               >
                 {data.text}
               </RestyleText>

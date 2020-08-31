@@ -4,7 +4,7 @@ const copies = {
       name: "Eduardo Hernandez Garza",
       title: "👨🏻‍💻 I'm a front-end developer based in Mexico.",
       description:
-        "CS graduate, I code React and React Native aplications using TypeScript, also I'm into UI/UX and animations.",
+        "CS graduate, I code React and React Native applications using TypeScript, also I'm into UI/UX and animations.",
     },
     abilities: {
       experience: {
@@ -12,41 +12,54 @@ const copies = {
         title: "Experience",
         jobs: [
           {
-            company: "Vitau",
+            company: "Vitau (YC Company)",
             location: "Monterrey, Mexico.",
-            position: "UX Designer & Front-End Developer",
-            date: "SEP 2019 - ONGOING",
-            description:
-              "Designing wireframes, user flow, working in a Design System and coding react components.",
+            position: "Front-End Developer & UX Designer",
+            date: "SEP 2019 - PRESENT",
+            description: [
+              "Develop front-end applications using for our e-commerce website and our internal dashboard.",
+              "Design LoFi and HiFi wireframes for our internal dashboard.",
+              "Worked and maintained our design system using Sketch and Notion.",
+            ],
           },
           {
             company: "Base22",
             location: "Monterrey, Mexico.",
             position: "Web Developer Intern",
             date: "JUNE 2019 - JULY 2019",
-            description:
-              "Developed Web Components for an in-house design system, using Stencil.js, TypeScript and Jest.",
+            description: [
+              "Developed Web Components for an in-house design system, using Stencil.js, and TypeScript.",
+              "Component testing using Jest.",
+            ],
           },
           {
             company: "Monterrey Tec",
             location: "Monterrey, Mexico.",
             position: "UX Designer",
             date: "OCTOBER 2018 - MAY 2019",
-            description: `Worked in my unversity, designed and prototyped wireframes like newsletters, mobile apps demos, surveys, and widgets.`,
+            description: [
+              "Worked at my university, designed, and prototyped wireframes like newsletters, mobile apps demos, and surveys using Sketch, Illustrator, and Adobe XD.",
+            ],
           },
           {
             company: "Inflection Point",
             location: "Monterrey, Mexico.",
-            position: "UX Designer",
+            position: "UX Designer & Developer",
             date: "SEPTEMBER 2018",
-            description: `Designed, prototyped and developed a dashboard using Adobe XD, React, React Context, and Firebase.`,
+            description: [
+              "Designed and prototyped a dashboard using Adobe XD.",
+              "Developed the dashboard using React, React Context API, and Firebase.",
+            ],
           },
           {
             company: "GDX",
             location: "Monterrey, Mexico.",
             position: "Full Stack Developer Intern",
             date: "JANUARY 2018 - MAY 2018",
-            description: `Developed APIs using Django and MySQL, developed the front-end using Angular5 and Bootstrap.`,
+            description: [
+              "Developed APIs using Django and MySQL.",
+              "Developed the front-end for the APIs using Angular5 and Bootstrap.",
+            ],
           },
         ],
       },
