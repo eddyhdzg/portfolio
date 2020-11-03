@@ -5,11 +5,17 @@ interface IEducationProps {
   university: string;
   major: string;
   date: string;
+  isLast: boolean;
 }
 
-const Education: React.FC<IEducationProps> = ({ university, major, date }) => {
+const Education: React.FC<IEducationProps> = ({
+  university,
+  major,
+  date,
+  isLast,
+}) => {
   return (
-    <Card>
+    <Card marginBottom={isLast ? "7xl" : 0}>
       <RestyleText variant="bold" marginBottom="sm">
         {major}
       </RestyleText>

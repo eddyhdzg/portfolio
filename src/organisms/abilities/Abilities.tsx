@@ -41,7 +41,13 @@ const Abilities: React.FC = () => {
       >
         <Box marginBottom="7xl">
           <SubHeader emoji={education.emoji}>{education.title}</SubHeader>
-          <Education {...education.data} />
+          {education.data.map((data, index) => (
+            <Education
+              key={data.university}
+              {...data}
+              isLast={index + 1 !== education.data.length}
+            />
+          ))}
         </Box>
 
         <Box marginBottom="7xl">

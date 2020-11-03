@@ -4,7 +4,7 @@ const copies = {
       name: "Eduardo Hernandez Garza",
       title: "👨🏻‍💻 I'm a front-end developer based in Mexico.",
       description:
-        "CS graduate, I code React and React Native applications using TypeScript, also I'm into UI/UX and animations.",
+        "CS graduate, I code React and React Native applications using TypeScript, also I'm into UI/UX and competitive programming.",
     },
     abilities: {
       experience: {
@@ -17,9 +17,9 @@ const copies = {
             position: "Front-End Developer & UX Designer",
             date: "SEP 2019 - PRESENT",
             description: [
-              "Develop front-end applications using for our e-commerce website and our internal dashboard.",
-              "Design LoFi and HiFi wireframes for our internal dashboard.",
-              "Worked and maintained our design system using Sketch and Notion.",
+              "Developed front-end applications for e-commerce.",
+              "Designed LoFi and HiFi wireframes for the internal dashboard.",
+              "Maintained the design system with Sketch, Storybook, and Notion.",
             ],
           },
           {
@@ -28,17 +28,8 @@ const copies = {
             position: "Web Developer Intern",
             date: "JUNE 2019 - JULY 2019",
             description: [
-              "Developed Web Components for an in-house design system, using Stencil.js, and TypeScript.",
-              "Component testing using Jest.",
-            ],
-          },
-          {
-            company: "Monterrey Tec",
-            location: "Monterrey, Mexico.",
-            position: "UX Designer",
-            date: "OCTOBER 2018 - MAY 2019",
-            description: [
-              "Worked at my university, designed, and prototyped wireframes like newsletters, mobile apps demos, and surveys using Sketch, Illustrator, and Adobe XD.",
+              "Developed Web Components for an in-house design system with Stencil.js and TypeScript.",
+              "Component testing with Jest.",
             ],
           },
           {
@@ -47,8 +38,8 @@ const copies = {
             position: "UX Designer & Developer",
             date: "SEPTEMBER 2018",
             description: [
-              "Designed and prototyped a dashboard using Adobe XD.",
-              "Developed the dashboard using React, React Context API, and Firebase.",
+              "Designed and prototyped a dashboard with Adobe XD.",
+              "Developed the dashboard with React and Firebase.",
             ],
           },
           {
@@ -57,8 +48,8 @@ const copies = {
             position: "Full Stack Developer Intern",
             date: "JANUARY 2018 - MAY 2018",
             description: [
-              "Developed APIs using Django and MySQL.",
-              "Developed the front-end for the APIs using Angular5 and Bootstrap.",
+              "Developed APIs with Django and MySQL.",
+              "Developed the front-end for the APIs with Angular5 and Bootstrap.",
             ],
           },
         ],
@@ -76,9 +67,8 @@ const copies = {
               "TypeScript",
               "React",
               "React Native",
-              "Expo",
-              "Next.js",
               "Flux / Redux / Zustand",
+              "Expo",
               "Firebase",
               "Git",
             ],
@@ -88,6 +78,7 @@ const copies = {
             data: [
               "Adobe XD",
               "Sketch",
+              "Storybook",
               "Design Systems",
               "Atomic Design",
               "BEM Convention",
@@ -95,7 +86,12 @@ const copies = {
           },
           {
             subtitle: "Currently Learning",
-            data: ["Adobe After Effects", "Lottie", "Vim"],
+            data: [
+              "Competitive programming",
+              "Japanese",
+              "Arduino",
+              "3D Design",
+            ],
           },
         ],
       },
@@ -120,11 +116,19 @@ const copies = {
       education: {
         title: "Education",
         emoji: "👨🏻‍🎓",
-        data: {
-          university: "Monterrey Tec (ITESM)",
-          major: "Computer Science",
-          date: "AUGUST 2016 - DECEMBER 2019",
-        },
+        data: [
+          {
+            university: "Kanazawa University",
+            major:
+              "H​uman-computer interaction research student (remote due to covid)",
+            date: "OCTOBER 2020 - SEPTEMBER 2021",
+          },
+          {
+            university: "Monterrey Tec (ITESM)",
+            major: "Bachelor of computer science",
+            date: "AUGUST 2016 - DECEMBER 2019",
+          },
+        ],
       },
     },
     contact: {
